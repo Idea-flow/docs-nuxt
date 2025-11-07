@@ -1,14 +1,39 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: 'purple',
+      primary: 'blue',
+      secondary: 'indigo',
       neutral: 'slate'
     },
     footer: {
       slots: {
-        root: 'border-t border-default',
-        left: 'text-sm text-muted'
+        root: 'border-t border-slate-200 dark:border-slate-800 backdrop-blur-xl bg-white/80 dark:bg-slate-900/80 rounded-2xl shadow-sm',
+        left: 'text-sm text-slate-600 dark:text-slate-300'
       }
+    },
+    button: {
+      base: 'rounded-xl',
+      variants: {
+        solid: {
+          primary: 'bg-blue-500 hover:bg-blue-600 text-white',
+          secondary: 'bg-indigo-500 hover:bg-indigo-600 text-white'
+        }
+      }
+    },
+    card: {
+      base: 'rounded-2xl backdrop-blur-xl bg-white/80 dark:bg-slate-900/80 shadow-sm',
+      body: {
+        base: 'rounded-xl'
+      }
+    },
+    navbar: {
+      base: 'backdrop-blur-xl bg-white/80 dark:bg-slate-900/80 rounded-2xl shadow-sm'
+    },
+    breadcrumb: {
+      base: 'rounded-xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm'
+    },
+    badge: {
+      base: 'rounded-full'
     }
   },
   seo: {
